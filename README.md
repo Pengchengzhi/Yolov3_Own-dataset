@@ -221,6 +221,58 @@ Then `make clean` and `make`, run the detection command. Problem solved.
 
 **2. Why it happens**
 
+Generally it's because my picture is too small, 128 x 128 pixels.
+
+When I use the test code
+
+> sudo ./darknet detector test data/animal.data ./cfg/animal.cfg ./backup/animal_20000.weights ./data/val_images/000133.JPEG
+
+I'm actually calling function `test_detector()` in `example/detector.c`, and he will call `draw_detections()` defined in program `src/image.c`
+
+```
+void draw_detections(image im, detection *dets, int num, float thresh, char **names, image **alphabet, int classes)
+{
+    int i,j;
+
+    for(i = 0; i < num; ++i){
+        char labelstr[4096] = {0};
+        int class = -1;
+        for(j = 0; j < classes; ++j){
+            if (dets[i].prob[j] > thresh){
+                if (class < 0) {
+                    strcat(labelstr, names[j]);
+                    class = j;
+                } else {
+                    strcat(labelstr, ", ");
+                    strcat(labelstr, names[j]);
+                }
+                printf("%s: %.0f%%\n", names[j], dets[i].prob[j]*100);
+            }
+        }
+        if(class >= 0){
+            int width = im.h * .006;
+            ...
+            ...
+            ...
+```
+
+In the function above, im.h = 128 so width = 0. And then he passed these parameters to `draw_box_width()`
+
+```
+void draw_box_width(image a, int x1, int y1, int x2, int y2, int w, float r, float g, float b)
+{
+    int i=0;
+    for(i = 0; i < w; i++){
+        draw_box(a, x1+i, y1+i, x2-i, y2-i, r, g, b);
+    }
+}
+
+```
+
+At that time, i = 0, w = 0, `for` loop won'r run,  he won't call `draw_box()` so I can't get my boundingbox. By adding a `=` can make the program run and that's how I solved the problem.
+
+Pictures with their `im.h` smaller than 167 can have the same problem. 
+
 
 
 
