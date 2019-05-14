@@ -1,5 +1,5 @@
-# Yolov3_Own-dataset
-Train yolov3 on my own dataset, Ubuntu 16.04
+# Train yolov3 on my own dataset
+Ubuntu 16.04
 ## How to train
 ### Pre requirements
 
