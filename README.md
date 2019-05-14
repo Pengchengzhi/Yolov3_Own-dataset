@@ -1,13 +1,13 @@
 # Yolov3_Own-dataset
 Train yolov3 on my own dataset, Ubuntu 16.04
 ## How to train
-* Pre requirements
+### Pre requirements
 
-Install openCV, CUDA
+* Install openCV, CUDA
 
-Optional but highly recomended, will be a lot faster.
-* Download model
-0. Download source code
+* Optional but highly recomended, will be a lot faster.
+### Download model
+0. **Download source code**
 
 ```
  git clone https://github.com/pjreddie/darknet
@@ -16,7 +16,7 @@ Optional but highly recomended, will be a lot faster.
 ```
 
 There is another edition of [yolov3](https://github.com/AlexeyAB/darknet), chose whatever you want.
-1. Change makefile
+1. **Change makefile**
 
 Want to use GPU
 
@@ -34,7 +34,7 @@ Want to use CUDNN
  NVCC=/usr/local/cuda-10.0/bin/nvcc
 ```
 
-2. Compile
+2. **Compile**
 
 `make`
 
