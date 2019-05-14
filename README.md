@@ -56,11 +56,11 @@ My project is to detect five different kinds of objects: `lizard`,`bird`,`car`,`
 
  `.txt` file that I prepared: `train.txt`,`val.txt`and a lot of `picture_name.txt` in folder `labels`.
 
-`train.txt`: Store the paths of pictures used for train(without .jpg). One path per line.
+`train.txt`: Store the paths of pictures used for training (without .jpg). One path per line.
 
-`val.txt`: Store the paths of pictures used for test(without .jpg). One path per line.
+`val.txt`: Store the paths of pictures used for testing (without .jpg). One path per line.
 
-`picture_name.txt`: Store object information in the picture, one object per line. It should be customized to 
+`picture_name.txt`: Store bounding box information of the picture, one object per line. It should be customized to 
 
 > (object-class) (x_center) (y_center) (width) (height)
 
@@ -171,8 +171,8 @@ When I finished training and want to a picture of loss, I find I did't save it. 
 
 ### Test the result
 
-**Test a single picture**
-Change `.cfg` file:
+**0. Detect a single picture**
+* Change `.cfg` file:
 
 ```
 [net]
@@ -186,7 +186,11 @@ subdivisions=1    # Use it when you test the model
 ...
 ...
 ```
-Then `make clean` and `make`, now test a single picture:
+* Recompile:
+
+`make clean` and `make`,
+
+* Now choose a picture from test set and test:
 
 `sudo ./darknet detector test data/animal.data ./cfg/animal.cfg ./backup/animal_20000.weights ./data/val_images/000133.JPEG`
 
@@ -194,9 +198,14 @@ My results:
 
 ![dog](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc3.jpg) ![car](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc1.jpg) ![lizard](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc2.jpg) ![turtle](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc5.jpg) ![bird](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc4.jpg)
 
+**1. Compute recall**
 
 
 
+### A debug experience
+When I run the test code for a single image, I got pictures with correct lable but no bbox:
+
+![car](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/fail1.jpg) ![lizard](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/fail2.jpg) ![dog](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/fail3.jpg)
 
 
 
