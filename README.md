@@ -45,7 +45,7 @@ Then test the dog picture
 
 If you are lucky, you can see the following picture.
 
-![Add a picture](https://pjreddie.com/media/image/Screen_Shot_2018-03-24_at_10.48.42_PM.png)
+![dog_picture](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/dog_predictions.jpg)
 
 ### Customize my dataset
 
@@ -55,19 +55,30 @@ My project is to detect five different kinds of objects: `lizard`,`bird`,`car`,`
 
 **1. Generate .txt file**
 
- `.txt` file that I prepared: `train.txt`,`val.txt`,`animal_train.txt`,`animal_val.txt`and a lot of `picture_name.txt` in folder `labels`.
+ `.txt` file that I prepared: `train.txt`,`val.txt`and a lot of `picture_name.txt` in folder `labels`.
 
-`train.txt`: Store the names of pictures used for train(without .jpg). One name per line.
+`train.txt`: Store the paths of pictures used for train(without .jpg). One path per line.
 
-`val.txt`: Store the names of pictures used for test(without .jpg). One name per line.
-
-`animal_train.txt`: Store the paths of pictures used for train(without .jpg). One path per line.
-
-`animal_val.txt`: Store the paths of pictures used for test(without .jpg). One path per line.
+`val.txt`: Store the paths of pictures used for test(without .jpg). One path per line.
 
 `picture_name.txt`: Store object information in the picture, one object per line.
 
 * Put folder labels and folder pictures under the same directory.
+
+I have 150 pictures for training and 30 pictures for testing, each group, so my file is like 
+
+>train_images
+>>`000001.jpg`...`000750.jpg`
+>train_labels
+>>`000001.txt`...`000750.txt`
+>val_images
+>>`000001.jpg`...`000150.jpg`
+>val_labels
+>>`000001.txt`...`000150.txt`
+>animal.data
+>animal.names
+>train.txt
+>val.txt
 
 **2. Change relevant codes**
 
