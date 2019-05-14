@@ -34,11 +34,11 @@ Instead of this original edition yolov3, there is another AB edition of [yolov3]
 
 Download a pre-trained model to test
 
-> wget https://pjreddie.com/media/files/yolov3.weights
+`wget https://pjreddie.com/media/files/yolov3.weights`
 
 Then test the dog picture
 
-> ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
+` ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg`
 
 If you are lucky, you will get a picture like this
 
@@ -157,15 +157,15 @@ I have 150 pictures for training and 30 pictures for testing, each group, so my 
 >val.txt
 
 **4. Download a pre-trained weight**
-> wget https://pjreddie.com/media/files/darknet53.conv.74
+` wget https://pjreddie.com/media/files/darknet53.conv.74`
 
 **5. Start training**
 
-> sudo ./darknet detector train data/animal.data cfg/animal.cfg darknet53.conv.74 
+` sudo ./darknet detector train data/animal.data cfg/animal.cfg darknet53.conv.74` 
 
 When I finished training and want to visulize the loss, I found I did't save it. So maybe try the following code for training instead of the previous one:
 
-> sudo ./darknet detector train pds/fish/cfg/fish.data pds/fish/cfg/yolov3-fish.cfg darknet53.conv.74 2>1 | tee visualization/train_yolov3.log 
+` sudo ./darknet detector train pds/fish/cfg/fish.data pds/fish/cfg/yolov3-fish.cfg darknet53.conv.74 2>1 | tee visualization/train_yolov3.log `
 
 ### Test the result
 
