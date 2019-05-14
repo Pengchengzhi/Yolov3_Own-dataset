@@ -51,11 +51,11 @@ Add a picture
 
 **0. Background**
 
-My project is to detect five different kinds of objects: `lizard``bird``car``dog``turtle` and I use [labeling](https://github.com/tzutalin/labelImg) to label my pictures. After that, prepare a folder to save all the pictures and another folder to save all the `.xml` documents.
+My project is to detect five different kinds of objects: `lizard`,`bird`,`car`,`dog`,`turtle` and I use [labeling](https://github.com/tzutalin/labelImg) to label my pictures. After that, prepare a folder to save all the pictures and another folder to save all the `.xml` documents.
 
 **1. Generate .txt file**
 
- `.txt` file I prepared: `train.txt``val.txt``animal_train.txt``animal_val.txt`and a lot of `picture_name.txt` in folder `labels`.
+ `.txt` file that I prepared: `train.txt`,`val.txt`,`animal_train.txt`,`animal_val.txt`and a lot of `picture_name.txt` in folder `labels`.
 
 `train.txt`: Store the names of pictures used for train(without .jpg). One name per line.
 
