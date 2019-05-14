@@ -69,9 +69,9 @@ for example:
 
 > 0 0.66015625 0.28515625 0.6171875 0.5390625
 
-* Put folder labels and folder pictures under the same directory.
+* Put folder `labels` and folder `pictures` under the same directory.
 
-**2. Change some relevant files**
+**2. Change some relevant files and codes**
 * Copy `voc.names` ,rename to `animal.names`, and change it to my class names, one class name per line. 
 ```
 bird
@@ -135,18 +135,18 @@ random=1           # set to 0 if memory full
 # Behind the three [yolo] layers there is a [convolutional] layer, change their filters.
 ```
 
-**3. How's it like after **
+**3. After the change**
 
 I have 150 pictures for training and 30 pictures for testing, each group, so my folder `data` is like 
 
 >train_images
->>`000001.jpg`...`000750.jpg`
+>>`000001.JPEG`...`000750.JPEG`
 >
 >train_labels
 >>`000001.txt`...`000750.txt`
 >
 >val_images
->>`000001.jpg`...`000150.jpg`
+>>`000001.JPEG`...`000150.JPEG`
 >
 >val_labels
 >>`000001.txt`...`000150.txt`
@@ -159,7 +159,29 @@ I have 150 pictures for training and 30 pictures for testing, each group, so my 
 >
 >val.txt
 
-**2. Change relevant codes**
+**4. Download pre-trained weights**
+`wget https://pjreddie.com/media/files/darknet53.conv.74`
+
+**5. Start training**
+
+`sudo ./darknet detector train data/animal.data cfg/animal.cfg darknet53.conv.74 `
+
+When I finished training and want to a picture of loss, I find I did't save it. So maybe try the following code for training instead of the previous one:
+
+`sudo ./darknet detector train pds/fish/cfg/fish.data pds/fish/cfg/yolov3-fish.cfg darknet53.conv.74 2>1 | tee visualization/train_yolov3.log `
+
+### Test the result
+
+**Test a single picture**
+
+`sudo ./darknet detector test data/animal.data ./cfg/animal.cfg ./backup/animal_20000.weights ./data/val_images/000133.JPEG`
+
+My results:
+
+![dog](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc3.jpg) ![car](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc1.jpg) ![lizard](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc2.jpg) ![turtle](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc5.jpg) ![bird](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc4.jpg)
+
+
+
 
 
 
