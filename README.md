@@ -188,7 +188,7 @@ subdivisions=1    # Use it when you test the model
 ```
 * Recompile:
 
-`make clean` and `make`,
+`make clean` and `make`
 
 * Now choose a picture from test set and test:
 
@@ -203,9 +203,33 @@ My results:
 
 
 ### A debug experience
+
+**0. Description**
+
 When I run the test code for a single image, I got pictures with correct lable but no bbox:
 
 ![car](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/fail1.jpg) ![lizard](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/fail2.jpg) ![dog](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/fail3.jpg)
+
+**1. How I solved it**
+
+Open file `src/image.c`, find function `draw_box_width()`, change the loop from
+
+>  for(i = 0; i < w; i++)
+
+to
+
+>  for(i = 0; i <= w; i++)
+
+Then `make clean` and `make`, run the detection command. Problem solved.
+
+**2. Why it happens**
+
+
+
+
+
+
+
 
 
 
