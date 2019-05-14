@@ -61,9 +61,22 @@ My project is to detect five different kinds of objects: `lizard`,`bird`,`car`,`
 
 `val.txt`: Store the paths of pictures used for test(without .jpg). One path per line.
 
-`picture_name.txt`: Store object information in the picture, one object per line.
+`picture_name.txt`: Store object information in the picture, one object per line. It should be customized to 
+
+> <object-class> <x_center> <y_center> <width> <height>
+
+for example:
+
+> 0 0.66015625 0.28515625 0.6171875 0.5390625
 
 * Put folder labels and folder pictures under the same directory.
+
+**2. Change some relevant files**
+* Copy `voc.names` and change it to your object. For me it's `animal.names`, one class name per line.
+
+* Copy `voc.data` in folder `cfg`, rename to `animal.data`.
+```
+```
 
 I have 150 pictures for training and 30 pictures for testing, each group, so my folder `data` is like 
 
