@@ -8,10 +8,11 @@ Install openCV, CUDA
 Optional but highly recomended, will be a lot faster.
 * Download model
 0. Download source code
-'''
+
+"""
  git clone https://github.com/pjreddie/darknet
  cd darknet
-'''
+"""
 
 There is another edition of [yolov3](https://github.com/AlexeyAB/darknet), chose whatever you want.
 1. Change makefile
