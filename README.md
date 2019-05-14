@@ -199,7 +199,7 @@ My results:
 
 ### A debug experience
 
-**0. Description**
+**0. Problem description**
 
 When I run the test code for a single image, I got pictures with correct lable but no bbox:
 
