@@ -63,7 +63,7 @@ My project is to detect five different kinds of objects: `lizard`,`bird`,`car`,`
 
 `picture_name.txt`: Store object information in the picture, one object per line. It should be customized to 
 
-> <object-class> <x_center> <y_center> <width> <height>
+>  <object-class> <x_center> <y_center> <width> <height>
 
 for example:
 
