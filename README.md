@@ -10,7 +10,6 @@ Environment: Ubuntu 16.04
 
 ```
  git clone https://github.com/pjreddie/darknet
- 
  cd darknet
 ```
 
@@ -26,7 +25,6 @@ Instead of this original edition yolov3, there is another AB edition of [yolov3]
 
 ```
  CUDNN=1
- 
  NVCC=/usr/local/cuda-10.0/bin/nvcc
 ```
 
