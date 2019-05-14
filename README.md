@@ -16,6 +16,7 @@ Train yolov3 on my own dataset, Ubuntu 16.04
 ```
 
 There is another edition of [yolov3](https://github.com/AlexeyAB/darknet), chose whatever you want.
+
 **1. Change makefile**
 
 * Want to use GPU  --->   `GPU=1`
@@ -30,9 +31,9 @@ There is another edition of [yolov3](https://github.com/AlexeyAB/darknet), chose
  NVCC=/usr/local/cuda-10.0/bin/nvcc
 ```
 
-**1. Compile**  --->   `make`
+**2. Compile**  --->   `make`
 
-**2. Test**
+**3. Test**
 
 Download a pre-trained model to test
 
