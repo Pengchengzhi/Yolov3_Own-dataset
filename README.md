@@ -18,15 +18,15 @@ Train yolov3 on my own dataset, Ubuntu 16.04
 There is another edition of [yolov3](https://github.com/AlexeyAB/darknet), chose whatever you want.
 **1. Change makefile**
 
-Want to use GPU
+* Want to use GPU
 
 `GPU=1`
 
-Want to use openCV
+* Want to use openCV
 
 `OPENCV=1`
 
-Want to use CUDNN
+* Want to use CUDNN
 
 ```
  CUDNN=1
@@ -34,11 +34,13 @@ Want to use CUDNN
  NVCC=/usr/local/cuda-10.0/bin/nvcc
 ```
 
-**2. Compile**
+**1. Compile**
 
 `make`
 
-After that, download a pre-trained model to test
+**2. Test**
+
+Download a pre-trained model to test
 
 `wget https://pjreddie.com/media/files/yolov3.weights`
 
