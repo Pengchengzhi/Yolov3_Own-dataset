@@ -223,7 +223,7 @@ Generally it's because my picture is too small, 128 x 128 pixels.
 
 When I use the test code
 
-> sudo ./darknet detector test data/animal.data ./cfg/animal.cfg ./backup/animal_20000.weights ./data/val_images/000133.JPEG
+` sudo ./darknet detector test data/animal.data ./cfg/animal.cfg ./backup/animal_20000.weights ./data/val_images/000133.JPEG`
 
 I'm actually calling function `test_detector()` in `example/detector.c`, and he will call `draw_detections()` defined in program `src/image.c`
 
