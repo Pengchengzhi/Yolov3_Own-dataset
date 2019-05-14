@@ -69,15 +69,22 @@ I have 150 pictures for training and 30 pictures for testing, each group, so my 
 
 >train_images
 >>`000001.jpg`...`000750.jpg`
+
 >train_labels
 >>`000001.txt`...`000750.txt`
+
 >val_images
 >>`000001.jpg`...`000150.jpg`
+
 >val_labels
 >>`000001.txt`...`000150.txt`
+
 >animal.data
+
 >animal.names
+
 >train.txt
+
 >val.txt
 
 **2. Change relevant codes**
