@@ -7,7 +7,7 @@ Train yolov3 on my own dataset, Ubuntu 16.04
 
 * Optional but highly recomended, will be a lot faster.
 ### Download model
-0. **Download source code**
+**0. Download source code**
 
 ```
  git clone https://github.com/pjreddie/darknet
@@ -16,7 +16,7 @@ Train yolov3 on my own dataset, Ubuntu 16.04
 ```
 
 There is another edition of [yolov3](https://github.com/AlexeyAB/darknet), chose whatever you want.
-1. **Change makefile**
+**1. Change makefile**
 
 Want to use GPU
 
@@ -34,7 +34,7 @@ Want to use CUDNN
  NVCC=/usr/local/cuda-10.0/bin/nvcc
 ```
 
-2. **Compile**
+**2. Compile**
 
 `make`
 
