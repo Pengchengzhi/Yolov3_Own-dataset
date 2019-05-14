@@ -198,10 +198,6 @@ My results:
 
 ![car](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc1.jpg) ![lizard](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc2.jpg) ![dog](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc3.jpg) ![turtle](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc5.jpg) ![bird](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc4.jpg)
 
-**1. Compute recall**
-
-
-
 ### A debug experience
 
 **0. Description**
@@ -212,7 +208,9 @@ When I run the test code for a single image, I got pictures with correct lable b
 
 **1. How I solved it**
 
-Open file `src/image.c`, find function `draw_box_width()`, change the loop from
+Open program `src/image.c`, find function `draw_box_width()`, change the loop function:
+
+from
 
 >  for(i = 0; i < w; i++)
 
