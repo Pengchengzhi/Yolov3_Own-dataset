@@ -193,7 +193,7 @@ subdivisions=1    # Use it when you test the model
 
 > sudo ./darknet detector test data/animal.data ./cfg/animal.cfg ./backup/animal_20000.weights ./data/val_images/000133.JPEG
 
-My results:
+I trained a total number of 128w pictures, my results:
 
 ![car](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc1.jpg) ![lizard](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc2.jpg) ![dog](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc3.jpg) ![turtle](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc5.jpg) ![bird](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc4.jpg)
 
