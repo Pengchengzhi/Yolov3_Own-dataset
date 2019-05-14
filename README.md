@@ -2,6 +2,7 @@
 Train yolov3 on my own dataset, Ubuntu 16.04
 ## How to train
 * Pre requirements
+
 Install openCV, CUDA
 
 Optional but highly recomended, will be a lot faster.
