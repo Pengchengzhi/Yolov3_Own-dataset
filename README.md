@@ -15,7 +15,7 @@ Ubuntu 16.04
  cd darknet
 ```
 
-There is another edition of [yolov3](https://github.com/AlexeyAB/darknet), chose whatever you want.
+Instead of this original edition yolov3, there is another AB edition of [yolov3](https://github.com/AlexeyAB/darknet), chose whatever you want.
 
 **1. Change makefile**
 
@@ -47,13 +47,29 @@ If you are lucky, you can see the following picture.
 
 Add a picture
 
-### Customize our own dataset
+### Customize my dataset
 
+**0. Background**
 
+My project is to detect five different kinds of objects: `lizard``bird``car``dog``turtle` and I use [labeling](https://github.com/tzutalin/labelImg) to label my pictures. After that, prepare a folder to save all the pictures and another folder to save all the `.xml` documents.
 
+**1. Generate .txt file**
 
+ `.txt` file I prepared: `train.txt``val.txt``animal_train.txt``animal_val.txt`and a lot of `picture_name.txt` in folder `labels`.
 
+`train.txt`: Store the names of pictures used for train(without .jpg). One name per line.
 
+`val.txt`: Store the names of pictures used for test(without .jpg). One name per line.
+
+`animal_train.txt`: Store the paths of pictures used for train(without .jpg). One path per line.
+
+`animal_val.txt`: Store the paths of pictures used for test(without .jpg). One path per line.
+
+`picture_name.txt`: Store object information in the picture, one object per line.
+
+* Put folder labels and folder pictures under the same directory.
+
+**2. Change relevant codes**
 
 
 
