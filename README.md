@@ -173,6 +173,21 @@ When I finished training and want to a picture of loss, I find I did't save it. 
 ### Test the result
 
 **Test a single picture**
+Change `.cfg` file:
+
+```
+[net]
+# Testing
+batch=1  # Use it when you test the model
+subdivisions=1    # Use it when you test the model
+# Training
+# batch=64
+# subdivisions=32     # Set it smaller if memory full
+...    
+...
+...
+```
+Then `make clean` and `make`, now test a single picture:
 
 `sudo ./darknet detector test data/animal.data ./cfg/animal.cfg ./backup/animal_20000.weights ./data/val_images/000133.JPEG`
 
