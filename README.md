@@ -42,7 +42,7 @@ Then test the dog picture
 
 > ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
 
-If you are lucky, you can see the following picture.
+If you are lucky, you will get a picture like this
 
 ![dog_picture](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/dog_predictions.jpg)
 
@@ -54,7 +54,7 @@ My project is to detect five different kinds of objects: `lizard`,`bird`,`car`,`
 
 **1. Generate .txt file**
 
- `.txt` file that I prepared: `train.txt`,`val.txt`and a lot of `picture_name.txt` in folder `labels`.
+`.txt` file that I prepared: `train.txt`,`val.txt`and a lot of `picture_name.txt` in folder `labels`.
 
 `train.txt`: Store the paths of pictures used for training (without .jpg). One path per line.
 
@@ -71,7 +71,7 @@ for example:
 * Put folder `labels` and folder `pictures` under the same directory.
 
 **2. Change some relevant files and codes**
-* Copy `voc.names` ,rename to `animal.names`, and change it to my class names, one class name per line. 
+* Copy `voc.names` , rename to `animal.names`, and change it to my class names, one class name per line. 
 ```
 bird
 car
