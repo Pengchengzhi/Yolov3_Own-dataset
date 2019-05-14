@@ -1,7 +1,7 @@
 # Train yolov3 on my own dataset
 Environment: Ubuntu 16.04 
 ## How to train
-### Pre requirements
+### Pre-requirements
 
 * Install openCV, CUDA (optional but highly recommended, will be a lot faster).
 
@@ -158,7 +158,7 @@ I have 150 pictures for training and 30 pictures for testing, each group, so my 
 >
 >val.txt
 
-**4. Download pre-trained weights**
+**4. Download a pre-trained weight**
 > wget https://pjreddie.com/media/files/darknet53.conv.74
 
 **5. Start training**
@@ -171,7 +171,7 @@ When I finished training and want to visulize the loss, I found I did't save it.
 
 ### Test the result
 
-* Change `.cfg` file:
+* Switch the `.cfg` file to test mode:
 
 ```
 [net]
