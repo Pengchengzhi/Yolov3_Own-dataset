@@ -1,5 +1,5 @@
 # Train yolov3 on my own dataset
-Ubuntu 16.04
+Environment: Ubuntu 16.04 
 ## How to train
 ### Pre requirements
 
@@ -165,7 +165,7 @@ I have 150 pictures for training and 30 pictures for testing, each group, so my 
 
 > sudo ./darknet detector train data/animal.data cfg/animal.cfg darknet53.conv.74 
 
-When I finished training and want to a picture of loss, I find I did't save it. So maybe try the following code for training instead of the previous one:
+When I finished training and want to visulize the loss, I found I did't save it. So maybe try the following code for training instead of the previous one:
 
 > sudo ./darknet detector train pds/fish/cfg/fish.data pds/fish/cfg/yolov3-fish.cfg darknet53.conv.74 2>1 | tee visualization/train_yolov3.log 
 
