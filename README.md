@@ -171,7 +171,6 @@ When I finished training and want to visulize the loss, I found I did't save it.
 
 ### Test the result
 
-**0. Detect a single picture**
 * Change `.cfg` file:
 
 ```
