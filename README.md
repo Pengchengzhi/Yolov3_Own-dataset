@@ -6,7 +6,7 @@ Train yolov3 on my own dataset, Ubuntu 16.04
 * Install openCV, CUDA
 
 * Optional but highly recomended, will be a lot faster.
-### Download model
+### Download model and try a test
 **0. Download source code**
 
 ```
@@ -37,5 +37,27 @@ Want to use CUDNN
 **2. Compile**
 
 `make`
+
+After that, download a pre-trained model to test
+
+`wget https://pjreddie.com/media/files/yolov3.weights`
+
+Then test the dog picture
+
+`./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg`
+
+If you are lucky, you can see the following picture.
+
+Add a picture
+
+### Customize our own dataset
+
+
+
+
+
+
+
+
 
 
