@@ -65,7 +65,7 @@ My project is to detect five different kinds of objects: `lizard`,`bird`,`car`,`
 
 * Put folder labels and folder pictures under the same directory.
 
-I have 150 pictures for training and 30 pictures for testing, each group, so my file is like 
+I have 150 pictures for training and 30 pictures for testing, each group, so my folder `data` is like 
 
 >train_images
 >>`000001.jpg`...`000750.jpg`
