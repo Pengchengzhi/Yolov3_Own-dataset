@@ -45,7 +45,7 @@ Then test the dog picture
 
 If you are lucky, you can see the following picture.
 
-Add a picture
+![Add a picture](https://pjreddie.com/media/image/Screen_Shot_2018-03-24_at_10.48.42_PM.png)
 
 ### Customize my dataset
 
