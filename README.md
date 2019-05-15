@@ -1,7 +1,7 @@
 # Train yolov3 on my own dataset
 Environment: Ubuntu 16.04 
 
-[Download model and try a test](#Download model and try a test)
+[Download model and try a test](#Download-model-and-try-a-test)
 
 ## How to train
 ### Pre-requirements
