@@ -21,6 +21,8 @@ Instead of this original edition of yolov3, there is another AB edition of [yolo
 
 **1. Change makefile**
 
+`vi Makefile`
+
 * Want to use GPU  --->   `GPU=1`
 
 * Want to use openCV   --->   `OPENCV=1`
