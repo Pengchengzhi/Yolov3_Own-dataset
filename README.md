@@ -44,7 +44,7 @@ If you are lucky, you will get a picture like this
 
 ![dog_picture](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/dog_predictions.jpg)
 
-### Customize my dataset
+### Customize the dataset
 
 **0. Background**
 
