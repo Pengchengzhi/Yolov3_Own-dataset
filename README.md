@@ -77,7 +77,7 @@ lizard
 dog
 turtle
 ```
-The order of the names should match class index in `picture_name.txt`.
+The order of the names should match class name index in `picture_name.txt`.
 
 * Copy `voc.data`, rename to `animal.data`.
 ```
