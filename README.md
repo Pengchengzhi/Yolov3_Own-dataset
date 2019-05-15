@@ -259,7 +259,7 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
             ...
 ```
 
-In the function above, im.h = 128 so width = 0. And then he passed these parameters to `draw_box_width()`
+In the function above, im.h = 128 so width will be 0. And then he pass these parameters to `draw_box_width()`
 
 ```
 void draw_box_width(image a, int x1, int y1, int x2, int y2, int w, float r, float g, float b)
