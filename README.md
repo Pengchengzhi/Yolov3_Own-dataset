@@ -188,7 +188,7 @@ subdivisions=1    # Use it when you test the model
 
 * Now choose a picture from test set and test:
 
-> sudo ./darknet detector test data/animal.data ./cfg/animal.cfg ./backup/animal_20000.weights ./data/val_images/000133.JPEG
+`sudo ./darknet detector test data/animal.data ./cfg/animal.cfg ./backup/animal_20000.weights ./data/val_images/000133.JPEG`
 
 I trained a total number of 128w pictures, my results:
 
