@@ -69,7 +69,7 @@ for example:
 * Put folder `labels` and folder `pictures` under the same directory.
 
 **2. Change some relevant files and codes**
-* Copy `voc.names` , rename to `animal.names`, and change it to my class names, one class name per line. 
+* Copy `voc.names` , rename to `animal.names`, and change the class names, one class name per line. 
 ```
 bird
 car
