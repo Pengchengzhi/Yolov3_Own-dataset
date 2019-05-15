@@ -169,6 +169,8 @@ When I finished training and want to visulize the loss, I found I did't save it.
 
 ### Test the result
 
+**0. Detect a single picture**
+
 * Switch the `.cfg` file to test mode:
 
 ```
@@ -194,6 +196,9 @@ subdivisions=1    # Use it when you test the model
 I trained a total number of 128w pictures, my results:
 
 ![car](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc1.jpg) ![lizard](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc2.jpg) ![dog](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc3.jpg) ![turtle](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc5.jpg) ![bird](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc4.jpg)
+
+**1. Compute mAP**
+**2. Compute loss**
 
 ### A debug experience
 
