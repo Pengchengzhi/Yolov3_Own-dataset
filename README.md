@@ -1,20 +1,6 @@
 # Train yolov3 on my own dataset
 Environment: Ubuntu 16.04 
 
-## [How to train](#How-to-train)
-
-### [Pre-requirements](#Pre-requirements)
-
-## [Download model and try a test](#Download-model-and-try-a-test)
-
-**[0. Download source code](#Download-source-code)**
-
-**[1. Change make file](#Change-make-file)**
-
-
-
-
-
 ## How to train
 ### Pre-requirements
 
