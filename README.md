@@ -36,13 +36,9 @@ Instead of this original edition of yolov3, there is another AB edition of [yolo
 
 **3. Test**
 
-Download a pre-trained model to test
+Download a pre-trained model to test --> `wget https://pjreddie.com/media/files/yolov3.weights`
 
-`wget https://pjreddie.com/media/files/yolov3.weights`
-
-Then test the dog picture
-
-` ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg`
+Then test the dog picture ---> ` ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg`
 
 If you are lucky, you will get a picture like this
 
