@@ -129,7 +129,7 @@ random=1             # set to 0 if memory full
 ...
 
 # There are three [yolo] layers in total, change all of them.
-# Behind the three [yolo] layers there is a [convolutional] layer, change their filters.
+# Behind every [yolo] layer there is a [convolutional] layer, change filter number.
 ```
 
 **3. After the change**
