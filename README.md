@@ -218,17 +218,19 @@ to
 
 >  for(i = 0; i <= w; i++)
 
-Then `make clean` and `make`, run the detection command. Problem solved.
+Then recompile --->  `make clean` and `make`
 
-**2. Why it happens**
-
-Generally it's because my picture is too small, 128 x 128 pixels.
-
-When I use the test code
+Run the detection command:
 
 ` sudo ./darknet detector test data/animal.data ./cfg/animal.cfg ./backup/animal_20000.weights ./data/val_images/000133.JPEG`
 
-I'm actually calling function `test_detector()` in `example/detector.c`, and he will call `draw_detections()` defined in program `src/image.c`
+Problem solved.
+
+**2. Why it happens**
+
+Generally it's because my picture is too small, only 128 x 128 pixels.
+
+When I use the test code, I'm actually calling function `test_detector()` in `example/detector.c`, and he will call `draw_detections()` defined in program `src/image.c`
 
 ```
 void draw_detections(image im, detection *dets, int num, float thresh, char **names, image **alphabet, int classes)
