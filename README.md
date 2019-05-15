@@ -19,9 +19,7 @@ Otional but highly recommended, will be a lot faster.
 
 Instead of this original edition of yolov3, there is another AB edition of [yolov3](https://github.com/AlexeyAB/darknet), chose whatever you want.
 
-**1. Change makefile**
-
-`vi Makefile`
+**1. Change makefile** ---> `vi Makefile`
 
 * Want to use GPU  --->   `GPU=1`
 
