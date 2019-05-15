@@ -81,10 +81,10 @@ The order of the names should match class name index in `picture_name.txt`.
 
 * Copy `voc.data`, rename to `animal.data`.
 ```
- classes =  5 # My class number
- train   =  data/train.txt # Path to train.txt
- valid   =  data/val.txt # Path to val.txt
- names   =  data/animal.names # Path to animal.names
+ classes =  5                  # Class number
+ train   =  data/train.txt     # Path to train.txt
+ valid   =  data/val.txt       # Path to val.txt
+ names   =  data/animal.names  # Path to animal.names
  backup  =  backup/
 ```
 
@@ -92,11 +92,11 @@ The order of the names should match class name index in `picture_name.txt`.
 ```
 [net]
 # Testing
-# batch=1  # Use it when you test the model
-# subdivisions=1    # Use it when you test the model
+# batch=1            # Use it when you test the model
+# subdivisions=1     # Use it when you test the model
 # Training
 batch=64
-subdivisions=32     # Set it smaller if memory full
+subdivisions=32      # Set it smaller if memory full
 ...              
 ...
 ...
@@ -112,18 +112,18 @@ steps=10000,20000    # Change with max_batches
 size=1
 stride=1
 pad=1
-filters=30         # filters = 3*(classes + 5)
+filters=30           # filters = 3*(classes + 5)
 activation=linear
 
 [yolo]
 mask = 0,1,2
 anchors = 10,13,  16,30,  33,23,  30,61,  62,45,  59,119,  116,90,  156,198,  373,326
-classes=5          # change to your class number
+classes=5            # change to your class number
 num=9
 jitter=.3
 ignore_thresh = .5
 truth_thresh = 1
-random=1           # set to 0 if memory full
+random=1             # set to 0 if memory full
 ...
 ...
 ...
