@@ -156,12 +156,9 @@ I have 150 pictures for training and 30 pictures for testing, each group, so my 
 >
 >val.txt
 
-**4. Download a pre-trained weight**
-` wget https://pjreddie.com/media/files/darknet53.conv.74`
+**4. Download a pre-trained weight** ---> ` wget https://pjreddie.com/media/files/darknet53.conv.74`
 
-**5. Start training**
-
-` sudo ./darknet detector train data/animal.data cfg/animal.cfg darknet53.conv.74` 
+**5. Start training** ---> ` sudo ./darknet detector train data/animal.data cfg/animal.cfg darknet53.conv.74` 
 
 When I finished training and want to visulize the loss, I found I did't save it. So maybe try the following code for training instead of the previous one:
 
