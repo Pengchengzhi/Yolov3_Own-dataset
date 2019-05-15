@@ -132,7 +132,7 @@ random=1             # set to 0 if memory full
 # Behind every [yolo] layer there is a [convolutional] layer, change filter number.
 ```
 
-**3. After the change**
+**3. How it looks like after the change**
 
 I have 150 pictures for training and 30 pictures for testing, each group, so my folder `data` is like 
 
