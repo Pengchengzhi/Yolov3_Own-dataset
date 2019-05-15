@@ -3,7 +3,11 @@ Environment: Ubuntu 16.04
 ## How to train
 ### Pre-requirements
 
-* Install openCV, CUDA (optional but highly recommended, will be a lot faster).
+* OpenCV
+
+* CUDA 
+
+Otional but highly recommended, will be a lot faster.
 
 ### Download model and try a test
 **0. Download source code**
