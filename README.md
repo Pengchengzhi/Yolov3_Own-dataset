@@ -162,7 +162,7 @@ I have 150 pictures for training and 30 pictures for testing, each group, so my 
 
 When I finished training and want to visulize the loss, I found I did't save it. So maybe try the following code for training instead of the previous one:
 
-` sudo ./darknet detector train data/animal.data cfg/animal.cfg darknet53.conv.74 2>1 | tee visualization/train_yolov3.log `
+` sudo ./darknet detector train data/animal.data cfg/animal.cfg darknet53.conv.74 2>1 | tee visualization/animal.log `
 
 ### Test the result
 
