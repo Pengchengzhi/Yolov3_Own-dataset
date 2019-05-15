@@ -259,7 +259,7 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
             ...
 ```
 
-In the function above, `im.h` = 128 so `width` will be 0. And then he pass these parameters to `draw_box_width()`
+In the function above, `im.h` = 128 so `width` will be 0. And then he will pass these parameters to `draw_box_width()`
 
 ```
 void draw_box_width(image a, int x1, int y1, int x2, int y2, int w, float r, float g, float b)
@@ -272,7 +272,7 @@ void draw_box_width(image a, int x1, int y1, int x2, int y2, int w, float r, flo
 
 ```
 
-At that time, i = 0, w = 0, `for` loop won'r run,  he won't call `draw_box()` so I can't get my boundingbox. By adding a `=` can make the program run and that's how I solved the problem.
+At that time, `i` = 0, `w` = 0, the `for` loop won't run,  he won't call `draw_box()` so I can't get my boundingbox. By adding a `=` can make the program run and that's how I solved the problem.
 
 Pictures with their `im.h` smaller than 167 can have the same problem. 
 
