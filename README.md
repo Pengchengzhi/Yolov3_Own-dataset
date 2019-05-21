@@ -206,13 +206,15 @@ False positive ---> fp
 
 False negative ---> fn
 
-Precesion = $$\frac{tp}{tp+fp}$$
+Precesion = tp/(tp+fp) Recall = tp/(tp+fn)
+
+* Compute
 
 Find function `validiate_detector_recall` in `examples/detector.c`, make two changes:
 
-* Change the path: `list *plist = get _path("data/val.txt")  // to my path to val.txt`
+1' Change the path: `list *plist = get _path("data/val.txt")  // to my path to val.txt`
 
-* Change `for` loop as directed by [fix error in validate_detector_recall #952](https://github.com/pjreddie/darknet/pull/952/commits/6c8ed1bde84b27e9fbc0259e4ffd415a7d2c951b)
+2' Change the `for` loop as directed by [fix error in validate_detector_recall #952](https://github.com/pjreddie/darknet/pull/952/commits/6c8ed1bde84b27e9fbc0259e4ffd415a7d2c951b)
 
 ```
 ++total;
@@ -229,7 +231,7 @@ for(k = 0; k < nboxes; ++k){  // Use this line
 
 `./darknet detector recall data/animal.data cfg/animal.cfg backup/animal_20000.weights`
 
-My Results: 
+* My Results: 
 
 On test set ---> RPs/Img: 1.37	IOU: 71.64%	Recall:90.00%
 
