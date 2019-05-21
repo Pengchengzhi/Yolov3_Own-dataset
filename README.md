@@ -206,7 +206,9 @@ False positive ---> fp
 
 False negative ---> fn
 
-Precesion = tp/(tp+fp) Recall = tp/(tp+fn)
+Precesion = tp/(tp+fp) 
+
+Recall = tp/(tp+fn)
 
 * Compute
 
