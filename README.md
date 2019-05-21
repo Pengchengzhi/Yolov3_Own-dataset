@@ -214,11 +214,11 @@ for(k = 0; k < nboxes; ++k){  // Use this line
         best_iou = iou;
 ```
 
-My Result: 
+My Results: 
 
-On test set: RPs/Img: 1.37	IOU: 71.64%	Recall:90.00%
+On test set ---> RPs/Img: 1.37	IOU: 71.64%	Recall:90.00%
 
-On train set: RPs/Img: 1.03	IOU: 91.60%	Recall:100.00%
+On train set ---> RPs/Img: 1.03	IOU: 91.60%	Recall:100.00%
 
 ### A debug experience
 
