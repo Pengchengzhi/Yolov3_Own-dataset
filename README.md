@@ -206,7 +206,7 @@ False positive ---> fp
 
 False negative ---> fn
 
-Precesion = $$\frac{tp}{tp+fp}
+Precesion = $$\frac{tp}{tp+fp}$$
 
 Find function `validiate_detector_recall` in `examples/detector.c`, make two changes:
 
