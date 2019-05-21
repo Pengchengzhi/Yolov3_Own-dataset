@@ -196,6 +196,17 @@ I trained a total number of 128w pictures, my results:
 ![car](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc1.jpg) ![lizard](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc2.jpg) ![dog](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc3.jpg) ![turtle](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc5.jpg) ![bird](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc4.jpg)
 
 **1. Compute Recall and IoU**
+* Definition:
+
+True posotive ---> tp
+
+True negative ---> tn
+
+False positive ---> fp
+
+False negative ---> fn
+
+Precesion = \cfrac{tp}{tp+fp}
 
 Find function `validiate_detector_recall` in `examples/detector.c`, make two changes:
 
@@ -213,6 +224,10 @@ for(k = 0; k < nboxes; ++k){  // Use this line
     if(dets[k].objectness > thresh && iou > best_iou){
         best_iou = iou;
 ```
+
+`make clean` and `make`
+
+`./darknet detector recall data/animal.data cfg/animal.cfg backup/animal_20000.weights`
 
 My Results: 
 
