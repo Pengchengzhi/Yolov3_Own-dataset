@@ -195,9 +195,24 @@ I trained a total number of 128w pictures, my results:
 
 ![car](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc1.jpg) ![lizard](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc2.jpg) ![dog](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc3.jpg) ![turtle](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc5.jpg) ![bird](https://github.com/Pengchengzhi/Yolov3_Own-dataset/blob/master/images/suc4.jpg)
 
-**1. Compute mAP**
+**1. Compute Recall and IoU**
 
-**2. Compute loss**
+Find function `validiate_detector_recall` in `examples/detector.c`, make two changes:
+
+* Change the path: `list *plist = get _path("data/val.txt")  // to my path to val.txt`
+
+* Change `for` loop as directed by [fix error in validate_detector_recall #952](https://github.com/pjreddie/darknet/pull/952/commits/6c8ed1bde84b27e9fbc0259e4ffd415a7d2c951b)
+
+```
+++total;
+box t = {truth[j].x, truth[j].y, truth[j].w, truth[j].h};
+float best_iou = 0;
+// for(k = 0; k < l.w*l.h*l.n; ++k){
+for(k = 0; k < nboxes; ++k){  // Use this line
+    float iou = box_iou(dets[k].bbox, t);
+    if(dets[k].objectness > thresh && iou > best_iou){
+        best_iou = iou;
+```
 
 ### A debug experience
 
