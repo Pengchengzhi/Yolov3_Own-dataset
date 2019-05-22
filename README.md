@@ -242,11 +242,11 @@ On train set ---> RPs/Img: 1.03	IOU: 91.60%	Recall:100.00%
 **2. Compute AP and mAP**
 * Definition
 
-P(Precision) ---> for one image in one class
+P (Precision) ---> for one image in one class
 
-AP(AveragePrecision) ---> for all images in one class
+AP (AveragePrecision) ---> for all images in one class
 
-mAP(MeanAveragePrecision) ---> for all images in all classes
+mAP (MeanAveragePrecision) ---> for all images in all classes
 
 * Compute
 
