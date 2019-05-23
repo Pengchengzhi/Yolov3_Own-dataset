@@ -280,7 +280,7 @@ The fifth one is the path to save `annots.pkl` file.
 
 4' Run `compute_map.py`.
 
-The result is AP for this class.
+Get AP for this class.
 
 * My results
 
