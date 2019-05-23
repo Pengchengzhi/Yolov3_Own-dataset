@@ -252,7 +252,7 @@ mAP (MeanAveragePrecision) ---> for all images in all classes
 
 * Compute
 
-1' Detect a bunch of pictures and save the results `classname.txt` to `darknet/results` folder.
+1' Detect test set and save the results `classname.txt` to `darknet/results` folder.
 
 `./darknet detector valid data/animal.data cfg/animal.cfg backup/animal.backup -out ""`
 
