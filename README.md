@@ -276,7 +276,7 @@ The third path is for `val.txt` which contains picture name of test set, no pict
 
 The forth one is class name.
 
-The fifth path is the place to save `annots.pkl` file.
+The fifth one is the path to save `annots.pkl` file.
 
 4' Run `compute_map.py`.
 
@@ -291,8 +291,7 @@ The result is AP for this class.
 | Bird | 0.7822037102682264 |
 | Lizard | 0.9223655913978495 |
 | Turtle | 0.7221268965829435 |
-| mAP | 83.28 |
-
+| mAP | 0.8328 |
 
 ### A debug experience
 
