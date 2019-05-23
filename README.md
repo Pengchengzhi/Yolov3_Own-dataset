@@ -252,13 +252,13 @@ mAP (MeanAveragePrecision) ---> for all images in all classes
 
 * Compute
 
-* Detect a bunch of pictures and save the results `classname.txt` to `darknet/results` folder.
+1' Detect a bunch of pictures and save the results `classname.txt` to `darknet/results` folder.
 
 `./darknet detector valid data/animal.data cfg/animal.cfg backup/animal.backup -out ""`
 
-* Download [`voc_eval.py`](https://github.com/rbgirshick/py-faster-rcnn/blob/master/lib/datasets/voc_eval.py)
+2' Download [`voc_eval.py`](https://github.com/rbgirshick/py-faster-rcnn/blob/master/lib/datasets/voc_eval.py)
 
-* Build `compute_map.py`:
+3' Build `compute_map.py`:
 
 ```
 from voc_eval import voc_eval
@@ -278,7 +278,7 @@ The forth one is class name.
 
 The fifth path is the place to save `annots.pkl` file.
 
-* Run `compute_map.py`.
+4' Run `compute_map.py`.
 
 The result is AP for this class.
 
