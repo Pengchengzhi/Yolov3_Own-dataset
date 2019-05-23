@@ -51,7 +51,7 @@ If you are lucky, you will get a picture like this
 
 My project is to detect five different kinds of objects: `lizard`,`bird`,`car`,`dog`,`turtle` and I use [labeling](https://github.com/tzutalin/labelImg) to label my pictures. After that, prepare a folder to save all the pictures and another folder to save all the `.xml` documents. 
 
-*Do not delete these `xml` files, they are needed for computing mAP.
+Do not delete these `xml` files, they are needed for computing mAP.
 
 **1. Generate .txt file**
 
@@ -252,7 +252,47 @@ mAP (MeanAveragePrecision) ---> for all images in all classes
 
 * Compute
 
+* Detect a bunch of pictures and save the results `classname.txt` to `darknet/results` folder.
+
+`./darknet detector valid data/animal.data cfg/animal.cfg backup/animal.backup -out ""`
+
+* Download [`voc_eval.py`](https://github.com/rbgirshick/py-faster-rcnn/blob/master/lib/datasets/voc_eval.py)
+
+* Build `compute_map.py`:
+
+```
+from voc_eval import voc_eval
+
+rec,prec,ap = voc_eval('/home/karry/Documents/Yolo/darknet/results/{}.txt', '/home/karry/Documents/Yolo/darknet/val_xml/{}.xml', '/home/karry/Documents/Yolo/darknet/val.txt', 'classname','.')
+
+print('ap',ap)
+```
+
+The first path is for the detection results in the first step.
+
+The second path is for `.xml` documents of test set.
+
+The third path is for `val.txt` which contains picture name of test set, no picture path, no `.jpg`, only picture name. One name per line.
+
+The forth one is class name.
+
+The fifth path is the place to save `annots.pkl` file.
+
+* Run `compute_map.py`.
+
+The result is AP for this class.
+
 * My results
+
+| Class | AP |
+| :---: | :---: |
+| Dog | 0.8522680776014109 |
+| Car | 0.8850865226727296 |
+| Bird | 0.7822037102682264 |
+| Lizard | 0.9223655913978495 |
+| Turtle | 0.7221268965829435 |
+| mAP | 83.28 |
+
 
 ### A debug experience
 
