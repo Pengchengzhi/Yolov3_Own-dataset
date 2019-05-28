@@ -369,7 +369,7 @@ void draw_box_width(image a, int x1, int y1, int x2, int y2, int w, float r, flo
 
 At that time, `i` = 0, `w` = 0, the `for` loop won't run,  he won't call `draw_box()` so I can't get my boundingbox. By adding a `=` can make the program run and that's how I solved the problem.
 
-Pictures with their `im.h` smaller than 167 can have the same problem. 
+* Pictures with their `im.h` smaller than 167 can have the same problem. 
 
 
 
