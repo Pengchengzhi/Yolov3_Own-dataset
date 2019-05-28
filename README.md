@@ -1,6 +1,8 @@
 # Train yolov3 on my own dataset
 Environment: Ubuntu 16.04 
 
+Paper: [YOLOv3.pdf](https://pjreddie.com/media/files/papers/YOLOv3.pdf)
+
 ## How to train
 ### Pre-requirements
 
