@@ -20,7 +20,7 @@ Otional but highly recommended, will be a lot faster.
  cd darknet
 ```
 
-Instead of this original edition of yolov3, there is another AB edition of [yolov3](https://github.com/AlexeyAB/darknet), chose whatever you want.
+Instead of this original edition of yolov3, there is another [AB edition](https://github.com/AlexeyAB/darknet) of yolov3, chose whatever you want.
 
 **1. Change makefile** ---> `vi Makefile`
 
