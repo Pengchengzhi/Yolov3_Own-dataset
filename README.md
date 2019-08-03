@@ -101,7 +101,7 @@ The order of the names should match class name index in `picture_name.txt`.
 # subdivisions=1     # Use it when you test the model
 # Training
 batch=64
-subdivisions=32      # Set it smaller if memory full
+subdivisions=32      # Set it bigger if memory full
 ...              
 ...
 ...
@@ -134,7 +134,7 @@ random=1             # set to 0 if memory full
 ...
 
 # There are three [yolo] layers in total, change all of them.
-# Behind every [yolo] layer there is a [convolutional] layer, change filter number.
+# In front of every [yolo] layer there is a [convolutional] layer, change filter number.
 ```
 
 **3. How it looks like after the change**
